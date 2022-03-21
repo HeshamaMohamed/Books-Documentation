@@ -16,7 +16,7 @@ end
 
 # this is another variation which is less expensive in terms of computation therefore, more efficient.
 def insertion_sort(array)
-  debugger
+  # debugger
   for i in (1...array.size)
     hand = array[i]
     j = i - 1
@@ -28,7 +28,7 @@ def insertion_sort(array)
 
     array[j+1] = hand #places the element in its right position after shifting all of the bigger elements behind it.
   end
-  
+
   return array
 end
 
