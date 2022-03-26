@@ -11,6 +11,7 @@ I only started reading technical books one year ago while serving in the millita
 Given that i can access a computer now, i shall revise the books i have read and apply the concepts i learned by coding.
 
 I will revise/read next in order:-
+- Grokking Algorithms (Done reading :white_check_mark:)
 - Headfirst Object-Oriented Programming (Done reading :white_check_mark:)
 - Headfirst Design patterns (Done reading :white_check_mark:)
 - Clean Code (not yet :large_blue_circle:)
