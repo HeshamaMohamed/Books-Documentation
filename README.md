@@ -19,6 +19,9 @@ I will revise/read next in order:-
 - Designing Data Intensive Applications (not yet :large_blue_circle:)
 - Well-Grounded Rubyist (not yet :large_blue_circle:)
 - The Rails 5 way (not yet :large_blue_circle:)
+- Test Driven Development by example (not yet :large_blue_circle:)
 - Learning SQL (Done reading :white_check_mark:)
 
 These are the current books that are on my shelf right now. I guess the order of the reading is subject to change, depends on my changing needs while working. I will also try to write a short personal summary/review after reading/revising each book.
+
+All kind of advices are appreciated, feel free to give me feed back on anything you think could be improved, Thanks :).
