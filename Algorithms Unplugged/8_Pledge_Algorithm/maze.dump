@@ -1,0 +1,166 @@
+--- !ruby/object:Maze
+rows: 4
+cols: 4
+maze:
+- - &6 !ruby/object:Node
+    row: 0
+    col: 0
+    visited: true
+    on_path: false
+    neighbors:
+      :north: 
+      :east: &5 !ruby/object:Node
+        row: 0
+        col: 1
+        visited: true
+        on_path: false
+        neighbors:
+          :north: 
+          :east: &4 !ruby/object:Node
+            row: 0
+            col: 2
+            visited: true
+            on_path: false
+            neighbors:
+              :north: 
+              :east: &1 !ruby/object:Node
+                row: 0
+                col: 3
+                visited: true
+                on_path: false
+                neighbors:
+                  :north: 
+                  :east: 
+                  :south: &2 !ruby/object:Node
+                    row: 1
+                    col: 3
+                    visited: true
+                    on_path: false
+                    neighbors:
+                      :north: *1
+                      :east: 
+                      :south: &3 !ruby/object:Node
+                        row: 2
+                        col: 3
+                        visited: true
+                        on_path: false
+                        neighbors:
+                          :north: *2
+                          :east: 
+                          :south: &16 !ruby/object:Node
+                            row: 3
+                            col: 3
+                            visited: true
+                            on_path: false
+                            neighbors:
+                              :north: *3
+                              :east: 
+                              :south: 
+                              :west: 
+                          :west: 
+                      :west: 
+                  :west: *4
+              :south: 
+              :west: *5
+          :south: 
+          :west: *6
+      :south: &13 !ruby/object:Node
+        row: 1
+        col: 0
+        visited: true
+        on_path: false
+        neighbors:
+          :north: *6
+          :east: &12 !ruby/object:Node
+            row: 1
+            col: 1
+            visited: true
+            on_path: false
+            neighbors:
+              :north: 
+              :east: &7 !ruby/object:Node
+                row: 1
+                col: 2
+                visited: true
+                on_path: false
+                neighbors:
+                  :north: 
+                  :east: 
+                  :south: &8 !ruby/object:Node
+                    row: 2
+                    col: 2
+                    visited: true
+                    on_path: false
+                    neighbors:
+                      :north: *7
+                      :east: 
+                      :south: &11 !ruby/object:Node
+                        row: 3
+                        col: 2
+                        visited: true
+                        on_path: false
+                        neighbors:
+                          :north: *8
+                          :east: 
+                          :south: 
+                          :west: &9 !ruby/object:Node
+                            row: 3
+                            col: 1
+                            visited: true
+                            on_path: false
+                            neighbors:
+                              :north: &10 !ruby/object:Node
+                                row: 2
+                                col: 1
+                                visited: true
+                                on_path: false
+                                neighbors:
+                                  :north: 
+                                  :east: 
+                                  :south: *9
+                                  :west: &14 !ruby/object:Node
+                                    row: 2
+                                    col: 0
+                                    visited: true
+                                    on_path: false
+                                    neighbors:
+                                      :north: 
+                                      :east: *10
+                                      :south: 
+                                      :west: 
+                              :east: *11
+                              :south: 
+                              :west: &15 !ruby/object:Node
+                                row: 3
+                                col: 0
+                                visited: true
+                                on_path: false
+                                neighbors:
+                                  :north: 
+                                  :east: *9
+                                  :south: 
+                                  :west: 
+                      :west: 
+                  :west: *12
+              :south: 
+              :west: *13
+          :south: 
+          :west: 
+      :west: 
+  - *5
+  - *4
+  - *1
+- - *13
+  - *12
+  - *7
+  - *2
+- - *14
+  - *10
+  - *8
+  - *3
+- - *15
+  - *9
+  - *11
+  - *16
+start_node: *14
+end_node: *3
