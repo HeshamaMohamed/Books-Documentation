@@ -1,7 +1,10 @@
 # Code On Books
+## Currently taking a break during Ramadan.
+
 code examples in ruby from books I read.
 
 Currently I am reading Algorithms Unplugged book.
+However, i'll be reading in parallel the "Well-Grounded Rubyist" book as I have noticed while solving some of the problems that I haven't been thinking about the solutions more like a "rubyist" but rather like a C++ programmer where he would write/design most of the trivial ruby built-in functions on his own from scratch (that's the way I was taught in college). Hope it helps me overcome this shortcoming.
 
 I plan to make this repo serve as a documentation for me of the books i have read so far.
 There are several books that I have read/plan to read.
