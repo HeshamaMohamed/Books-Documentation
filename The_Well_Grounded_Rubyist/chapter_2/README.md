@@ -10,16 +10,16 @@
 - Ruby's use of references to objects and how references play out when multiple variables refer to the same object.
 
 ## Personal thoughts
-Transitioning from C++ to Ruby, there sure have been times where I stumbled upon code behaviors that i didn't understand, it is different from what  I would expect in C++.  
-And whenever I searched for the cause of those behaviors, I always found the main answer is or similar to "because everything in ruby is an object".  
+Transitioning from C++ to Ruby, there have been times when I stumbled upon code behaviors that I didn't understand. It was different from what  I would have expected when debugging in C++.  
+Whenever I searched for the cause of those behaviors, I always found the answer is similar to "because everything in ruby is an object".  
 
-I never got it tho, it seemed far too complex and I wouldn't understand the specific answers on stackoverflow. 
-That acted as limitation for me, because I had to think of other solutions to do this which may be longer or more complex.
+I never got it though. It seemed far too complex and I wouldn't understand the specific answers on StackOverflow. 
+That acted as a limitation for me. I had to think of other solutions to do this which may be longer or more complex.
 
 However, after reading this chapter, I think I got most of it. 
-I can understand now why it behaves like that. 
-Most importantly, I can now think of more ways to implement the solutions I thought of but couldn't implement back then.
+I can understand now why it behaved the way it did.  
+Most importantly, now I can think of more ways to implement the solutions I thought about but couldn't back then.
 
-I'm feeling great now as I grasped these concept and have a clearer understanding of how ruby works with objects.  
-especially the object-referencing part which prevented me from implementing many solutions back then because I didn't know how it worked in Ruby.
+it feels good now as I grasped these concepts and have a clearer understanding of how ruby works with objects.  
+Especially the object-referencing part which prevented me from implementing many solutions back then.
 

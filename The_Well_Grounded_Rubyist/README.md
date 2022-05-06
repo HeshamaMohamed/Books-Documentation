@@ -3,37 +3,36 @@
 
 ## Why this book?
 
-TL;DR, I want to gain deep knowledge of the ruby language so I can think of more innovative ways to solve problems.
+TL;DR, I want to gain deep knowledge of the ruby language to be able to think of more innovative ways to solve problems.
 
-after spending a while reading 'Algorithms Unplugged' book and trying to implement the algorithms inside of it myself in ruby, I noticed that i am missing something.
+While trying to implement some algorithms presented in the "Algorithms Unplugged" book using Ruby, I noticed that I am missing something.
 
-Well, I started programming in C++ and stuck with it for most of my 4 college years. ofcourse I did experiment other several languages but mostly it was C++.  
+A brief history about my college education. I started programming in C++ and got stuck with it for most of my 4 college years. Of course, I did experiment with several languages but it was mostly C++.  
 
-They were trying to make us establish a problem-solving mindset and have a clear understanding of how programming works under the hood, and by that, we were forced us re-invent the wheel whenever we needed a simple algorithm in our assignments/projects.
+They (the lecturers) were trying to achieve 2 goals. First, help us establish a problem-solving mindset. Second, get a clear understanding of how programming works under the hood.   We were instructed to reinvent the wheel whenever we needed a simple algorithm for our assignments/projects.
 
-we were not allowed to use the built-in algorithms/data structures in the language.  
-Instead of using the built-in Lists data structure, we created our own implementation of linked-list.  
-even a simple 3-line sorting algorithm didn't intercede for us. instead of just using the **array.sort**, we were made to write it up from scratch.
+We were not allowed to use the language's built-in algorithms/data structures.
+Instead of using the predefined List data structure, we created our implementation of it.  
+Even a simple 3-line sorting algorithm didn't pass. instead of just using the **array.sort**, we were made to write it up from scratch.
 
-I don't mean to talk about it as if they were torturing us, 
-I am glad they cared to teach us that. 
-And that surely helped me establishing some kind of "problem solving" mindset and understanding more about how programming works under the hood as with pointers and memory allocation.  
-However, that caused me some headache later when I tried programming in ruby.  
+They were not trying to torture us.
+I am glad they cared to teach us this way. 
+Surely that helped me establish some kind of a "problem solving" mindset and understand more about how programming works deeply with pointers and memory allocation.  
+However, that caused me some headaches later when I tried programming in Ruby.  
 
-I was Introduced to ruby when I first enrolled to AppAcademy bootcamp that teaches React On Rails stack in my senior college year.  
-I was fascinated by the ease of use, expressiveness and the plenty of helpful built-in functions that would spare me from writing lots of repeated code.  
-to sum it up, I had much better user-experience when programming in Ruby rather than C++, C#, etc..
+I was Introduced to ruby when I first enrolled in AppAcademy Bootcamp during my 4th year in college. Which teaches React On Rails stack.  
+I was fascinated by the ease of use, expressiveness, and the plenty of helpful built-in functions that would spare me from writing lots of repeated code.  
 
-Now,about the headache I mentioned above and the missing part that I mentioned earlier.  
-After getting used to program in ruby I noticed that I have problem with overcoming "Thinking In C++" and "becoming a rubyist".  
-I had found that whenever I get to think about how to program something, I still think of it as if I am writing C++, and filling my head with all the tiny details that i had to consider when writing with C++.  
+However, after getting used to the language, I noticed that I have a problem. I was not thinking as a Rubyist.
+I had found that whenever I got to think about how to program something, I still thought of it as if I am writing C++ code.  
+That filled my head with all the tiny details that I had to consider when writing with C++.  
 
-There are 2 side effects that I could think of.  
-First, all of those details that filled my head could reduce how much horizontally i can think of the solution.  by horizontal I mean the number of sequential steps I can chunk in my working memory while thinking for a solution. And that was inspired by the research of [The Magical Number Seven, Plus or Minus Two: Some Limits on Our Capacity for Processing Information](https://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two)
+That proposed 2 side effects that I could think of.  
+First, all of those details that filled my head could reduce how much I can think of the solution vertically. By vertical I mean the number of sequential steps I can chunk in my working memory thinking of a solution. That was inspired by the research of [The Magical Number Seven, Plus or Minus Two: Some Limits on Our Capacity for Processing Information](https://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two)
 
-Secondly, I couldn't find a way to implement some solutions i thought of.  
-Why? an example is that while trying to implement an algorithm i built my implementation based on using pointers, which is pretty valid in C++ and would work perfectly.  
-However, I found out that ruby doesn't deal with pointers and only uses objects. 
-That served as an obstacle back then and caused me to burnout.  
+Secondly, I couldn't find a way to implement some solutions I thought of.  
+Why? e.g; While trying to implement an algorithm, I considered the ability to use pointers, which is true in C++ and works fine.  
+However, I found that ruby doesn't deal with pointers.  
+That served as an obstacle back then and caused me a burnout.  
 
-I thought there must be a way to implement this in ruby, that is when I realized that I am missing the knowledge of the language. After checking reviews about books on ruby, I settled on this book.
+I thought there must be a way to implement this in ruby. That was when I realized that I am missing the knowledge of the language. After checking reviews about books on ruby, I settled on this book.
