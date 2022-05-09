@@ -36,7 +36,7 @@ The reading order of the books may vary over time according to my needs and visi
 However, suggestions are very welcome and appreciated.
 
 I will revise/read next in order:-
-- Well-Grounded Rubyist (Currently Reading :large_orange_circle:)
+- Well-Grounded Rubyist (Currently Reading)
 - Grokking Algorithms (Done reading :white_check_mark:)
 - Headfirst Object-Oriented Programming (Done reading :white_check_mark:)
 - Headfirst Design patterns (Done reading :white_check_mark:)
