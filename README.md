@@ -8,25 +8,28 @@ More into why I started reading it can be found in its README.md.
 
 ## Why start this?
 I have 4 reasons in mind.  
-First, It would serve as a documentation for my learning process and reading journey.  
+First, It would serve as documentation for my learning process and reading journey.  
 Second, It would be a helpful future reference for me while coding.  
-Third, I want to practice my writing skills. So, any feedback on this would be very appreciated.
+Third, I want to practice my writing skills. So, any feedback on this would be very appreciated.  
+Fourth, It might benefit anyone who starts to begin writing Ruby code.
 
 ## My history with books.
 Throughout my life, I have read only a few books. This is not something I am proud of. That is why I decided to change it back in January 2021.  
 
 I started reading technical books in January 2021. That was when I first started serving in the military (mandatory service).  
 But why books? It was the only learning resource available to me back then. 
-It first seemed like a big limitation for my learning journey.  
+It first seemed like a big limitation for my learning journey. I always favored the video content when it comes to learning something new.  
 
 After a while, I saw it as an opportunity rather than a limitation. 
-That is when I decided to build a reading habit. 
-And gladly, it is now my favorite type of resource when it comes to learning a new concept/technology.
+An opportunity to build a reading habit. 
+Gladly, it is now my favorite type of resource when it comes to learning a new concept/technology.  
+
+I experienced something different from the video contents I used to learn from.  
+I started to visualize the big picture rather than consume small bites of information with no proper linking between them or why they even existed.  
+The way the books propose a problem and its solution, and how they link the information together to provide you with a deep understanding is invaluable. 
 
 So, over 14 months I have been able to read 9 total books. 6 of which are technical and 3 are non-technical. 
-Given the circumstances in the military service and my new phase with books, I am satisfied with the result as a starting point.  
-
-Unfortunately, I couldn't put what I read into practice back then. 
+Given the circumstances back then and my new phase with books, I am satisfied with the result as a beginning. Unfortunately, I couldn't put what I read into practice back then. 
 However, now that I can do so, I decided to give it a go.
 
 ## Reading plan
