@@ -1,7 +1,7 @@
 # Code On Books
 
 Code examples from books I read. I write them in Ruby.  
-Alongside my thoughts on them while reading (you can find it in every chapter's README.md).
+Alongside my thoughts on them while reading (you can find them in every chapter's README.md).
 
 Currently, I am reading The Well-Grounded Rubyist.  
 More into why I started reading it can be found in its README.md.  
@@ -17,16 +17,15 @@ Fourth, It might benefit anyone who starts to begin writing Ruby code.
 Throughout my life, I have read only a few books. This is not something I am proud of. That is why I decided to change it back in January 2021.  
 
 I started reading technical books in January 2021. That was when I first started serving in the military (mandatory service).  
-But why books? It was the only learning resource available to me back then. 
-It first seemed like a big limitation for my learning journey. I always favored the video content when it comes to learning something new.  
+Why books? It was the only learning resource available to me back then. Also I have seen many people describing books as the best learning resource and encouraging everyone to read.  
+It first seemed like a big limitation for my learning journey. I always favored the video content when it comes to learning.  
 
-After a while, I saw it as an opportunity rather than a limitation. 
-An opportunity to build a reading habit. 
+After a while, I saw it as an opportunity rather than a limitation, I thought it is the best time to build a reading habit. 
 Gladly, it is now my favorite type of resource when it comes to learning a new concept/technology.  
 
-I experienced something different from the video contents I used to learn from.  
+I experienced something different from the video courses I used to learn from.  
 I started to visualize the big picture rather than consume small bites of information with no proper linking between them or why they even existed.  
-The way the books propose a problem and its solution, and how they link the information together to provide you with a deep understanding is invaluable. 
+I loved the way the books propose a problem and its solution in a fitting context. The way they link the information together to provide you with a deep understanding is invaluable. 
 
 So, over 14 months I have been able to read 9 total books. 6 of which are technical and 3 are non-technical. 
 Given the circumstances back then and my new phase with books, I am satisfied with the result as a beginning. Unfortunately, I couldn't put what I read into practice back then. 
