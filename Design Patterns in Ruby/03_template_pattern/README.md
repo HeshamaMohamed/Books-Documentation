@@ -5,3 +5,5 @@
   - Implementing the parts that doesn't change in the base class. (eg; Report Class)
   - Providing abstract methods for the sub-classes to implement based on their specific details.
   - Implementing the parts that vary in their specific new sub-class (eg; HTMLReport, PlainTextReport subclasses)
+
+<img src="template.jpeg" width="900" height="500"/>
