@@ -12,7 +12,7 @@ The user (context class) can refer to whatever strategy class it wants to use it
 <br>
 
 <p align="center">
-  <img src="strategy.jpeg" width="700" height="400"/>
+  <img src="strategy.jpg" width="700" height="400"/>
 </p>
 
 <br>
