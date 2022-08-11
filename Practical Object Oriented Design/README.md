@@ -21,3 +21,11 @@ I would recommend this book to anyone who wants to write a good maintainable OOP
 I made sure to note some quotes that I found insightful inside each chapter and list them in the READMEs of them.  
 The quotes I mentioned don't come close to summarizing the chapters' lessons.  
 So, if you think that's what it is all about, you are mistaken and you still need to read the book.
+
+```
+Note: 
+  The code in this repository is copied from the original repo from the author: https://github.com/skmetz/poodr2
+  All I did was:
+  - Extracting Redundant code from multiple files into separate ones to be included for more readability.
+  - Rename files to have descriptive names for better navigation.
+```
