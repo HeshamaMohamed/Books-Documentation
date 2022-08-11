@@ -1,0 +1,37 @@
+require_relative '06_wheel'
+
+class Gear
+  attr_reader :chainring, :cog, :wheel
+
+  # def initialize(chainring: 40, cog: 18, wheel:) # => arguments simple defaults
+  # def initialize(chainring: default_chainring, cog: 18, wheel:) # => arguments method defaults
+
+  def initialize(chainring:, cog:, wheel:)
+    @chainring = chainring
+    @cog       = cog
+    @wheel     = wheel
+  end
+
+  # ...
+  def gear_inches
+    ratio * wheel.diameter
+  end
+
+  def ratio
+    chainring / cog.to_f
+  end
+end
+
+puts Gear.new(
+  cog: 11,
+  chainring: 52,
+  wheel: Wheel.new(26, 1.5)
+).gear_inches
+# => 137.0909090909091
+
+puts Gear.new(
+  wheel: Wheel.new(26, 1.5),
+  chainring: 52,
+  cog: 11
+).gear_inches
+# => 137.0909090909091
