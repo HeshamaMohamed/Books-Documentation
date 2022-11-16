@@ -20,7 +20,7 @@ const list = [
   }
 ]
 
-function App() {
+const App = () =>{
   return (
     <div>
       <h1>My Hacker Stories</h1>
@@ -33,9 +33,10 @@ function App() {
     </div>
   );
 }
+  
 
-function List() {
-  return (
+const List = () =>
+  (
     <ul>
       {list.map((item) =>
         <li key={item.objectID}>
@@ -50,15 +51,15 @@ function List() {
       }
     </ul>
   );
-}
 
-function Search() {
-  return (
+
+const Search = () => 
+  (
     <>
       <label htmlFor="search">Search: </label>
       <input id="search" type="text"/>
     </>
   );
-}
+
 
 export default App
