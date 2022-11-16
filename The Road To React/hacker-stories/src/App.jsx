@@ -47,19 +47,26 @@ const List = () =>
           <span>{item.num_comments} </span>
           <span>{item.author} </span>
         </li>
-      )
-      }
+      )}
     </ul>
   );
 
 
-const Search = () => 
-  (
+const Search = () => {
+  const handleChange = (event) =>{
+    // synthetic event
+    console.log(event);
+    // value of target (here: input HTML element)
+    console.log(event.target.value);
+  }
+
+  return (
     <>
       <label htmlFor="search">Search: </label>
-      <input id="search" type="text"/>
+      <input id="search" type="text" onChange={handleChange} onBlur={handleChange} />
     </>
   );
-
+}
+  
 
 export default App
