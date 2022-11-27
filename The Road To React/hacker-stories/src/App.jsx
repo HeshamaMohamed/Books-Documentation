@@ -58,7 +58,10 @@ const Item = (props) => (
 );
 
 const Search = () => {
+  const [searchTerm, setSearchTerm] = React.useState('');
+
   const handleChange = (event) =>{
+    setSearchTerm(event.target.value);
     // synthetic event
     console.log(event);
     // value of target (here: input HTML element)
@@ -68,7 +71,11 @@ const Search = () => {
   return (
     <>
       <label htmlFor="search">Search: </label>
-      <input id="search" type="text" onChange={handleChange} onBlur={handleChange} />
+      <input id="search" type="text" value={searchTerm} onChange={handleChange} onBlur={handleChange} />
+
+      <p>
+        Searching for <strong>{searchTerm}</strong>
+      </p>
     </>
   );
 }
