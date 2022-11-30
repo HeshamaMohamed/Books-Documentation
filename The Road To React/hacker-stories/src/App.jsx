@@ -4,6 +4,7 @@ import * as React from 'react'
 
 
 const App = () =>{
+  const [searchTerm, setSearchTerm] = React.useState('');
   const stories = [
     {
       title: 'React',
@@ -24,18 +25,22 @@ const App = () =>{
   ]
 
   const handleSearch = (event) => {
-    console.log(event.target.value);
+    setSearchTerm(event.target.value);
   };
+
+  const searchedStories = stories.filter(story =>
+    story.title.toLowerCase().includes(searchTerm.toLowerCase())
+  )
 
   return (
     <div>
       <h1>My Hacker Stories</h1>
 
-      <Search onSearch={handleSearch}/>
+      <Search onSearch={handleSearch} setSearchTerm={setSearchTerm} searchTerm={searchTerm}/>
 
       <hr />
 
-      <List list={stories}/>
+      <List list={searchedStories}/>
     </div>
   );
 }
@@ -62,22 +67,10 @@ const Item = (props) => (
 );
 
 const Search = (props) => {
-  const [searchTerm, setSearchTerm] = React.useState('');
-
-  const handleChange = (event) =>{
-    setSearchTerm(event.target.value);
-
-    props.onSearch(event)
-  }
-
   return (
     <>
       <label htmlFor="search">Search: </label>
-      <input id="search" type="text" value={searchTerm} onChange={handleChange} onBlur={handleChange} />
-
-      <p>
-        Searching for <strong>{searchTerm}</strong>
-      </p>
+      <input id="search" type="text" onChange={props.onSearch} />
     </>
   );
 }
