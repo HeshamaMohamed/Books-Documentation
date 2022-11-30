@@ -4,7 +4,7 @@ import * as React from 'react'
 
 
 const App = () =>{
-  const [searchTerm, setSearchTerm] = React.useState('');
+  const [searchTerm, setSearchTerm] = React.useState('React');
   const stories = [
     {
       title: 'React',
@@ -36,7 +36,7 @@ const App = () =>{
     <div>
       <h1>My Hacker Stories</h1>
 
-      <Search onSearch={handleSearch} setSearchTerm={setSearchTerm} searchTerm={searchTerm}/>
+      <Search onSearch={handleSearch} setSearchTerm={setSearchTerm} search={searchTerm}/>
 
       <hr />
 
@@ -70,7 +70,7 @@ const Search = (props) => {
   return (
     <>
       <label htmlFor="search">Search: </label>
-      <input id="search" type="text" onChange={props.onSearch} />
+      <input id="search" type="text" value={props.search} onChange={props.onSearch} />
     </>
   );
 }
