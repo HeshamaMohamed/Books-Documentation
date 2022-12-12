@@ -37,45 +37,67 @@ const getAsyncStories = () =>
     setTimeout(() => resolve({ data: { stories: initialStories } }), 2000)
   );
 
-  const storiesReducer = (state, action) => {
-    switch(action.type) {
-      case 'SET_STORIES':
-        return action.payload;
-      case 'REMOVE_STORY':
-        return state.filter(story => action.payload.objectID !== story.objectID);
-      default:
-        throw new Error();
-    }
-  };
+const storiesReducer = (state, action) => {
+  switch (action.type) {
+    case 'STORIES_FETCH_INIT':
+      return {
+        ...state,
+        isLoading: true,
+        isError: false,
+      };
+    case 'STORIES_FETCH_SUCCESS':
+      return {
+        ...state,
+        isLoading: false,
+        isError: false,
+        data: action.payload,
+      };
+    case 'STORIES_FETCH_ERROR':
+      return {
+        ...state,
+        isLoading: false,
+        isError: true,
+      };
+    case 'REMOVE_STORY':
+      return {
+        ...state,
+        data: state.data.filter(
+          story => action.payload.objectID !== story.objectID,
+        ),
+      };
+    default:
+      throw new Error();
+  }
+};
 
-const App = () =>{
+const App = () => {
 
   const [searchTerm, setSearchTerm] = useStorageState('search', '');
+
   const [stories, dispatchStories] = React.useReducer(
-    storiesReducer,
-    []
+    storiesReducer, // reducer function
+    { data: [], isLoading: false, isError: false } // initial state
   );
 
-  const [isLoading, setIsLoading] = React.useState(false);
-  const [isError, setIsError] = React.useState(false);
-
   React.useEffect(() => {
-    setIsLoading(true);
+    dispatchStories({ type: 'STORIES_FETCH_INIT' });
 
-    getAsyncStories().then(result => {
-      dispatchStories({
-        type: 'SET_STORIES',
-        payload: result.data.stories,
-      });
-      setIsLoading(false);
-    })
-    .catch(() => setIsError(true));
+    getAsyncStories()
+      .then(result => {
+        dispatchStories({
+          type: 'STORIES_FETCH_SUCCESS',
+          payload: result.data.stories,
+        });
+      })
+      .catch(() =>
+        dispatchStories({ type: 'STORIES_FETCH_FAILURE' })
+      );
   }, []);
 
-  const handleRemoveStory = (item) =>{
+  const handleRemoveStory = (item) => {
     dispatchStories({
       type: 'REMOVE_STORY',
-      payload: item,
+      payload: item
     });
   };
 
@@ -83,7 +105,7 @@ const App = () =>{
     setSearchTerm(event.target.value);
   };
 
-  const searchedStories = stories.filter(story =>
+  const searchedStories = stories.data.filter(story =>
     story.title.toLowerCase().includes(searchTerm.toLowerCase())
   )
 
@@ -96,15 +118,15 @@ const App = () =>{
         label="Search"
         value={searchTerm}
         onInputChange={handleSearch}
-        >
+      >
         <strong>Search:</strong>
-        </InputWithLabel>
+      </InputWithLabel>
 
       <hr />
 
-      {isError && <p>Something went wrong...</p>}
+      {stories.isError && <p>Something went wrong...</p>}
 
-      {isLoading ? (
+      {stories.isLoading ? (
         <p>Loading...</p>
       ) : (
         <List
@@ -118,17 +140,17 @@ const App = () =>{
 
 
 const List = ({ list, onRemoveItem }) =>
-  (
-    <ul>
-      {list.map((item) =>
-        <Item
-          key={item.objectID}
-          item={item}
-          onRemoveItem={onRemoveItem}
-        />
-      )}
-    </ul>
-  );
+(
+  <ul>
+    {list.map((item) =>
+      <Item
+        key={item.objectID}
+        item={item}
+        onRemoveItem={onRemoveItem}
+      />
+    )}
+  </ul>
+);
 
 const Item = ({ item, onRemoveItem }) => {
   return (
@@ -148,12 +170,12 @@ const Item = ({ item, onRemoveItem }) => {
   );
 };
 
-const InputWithLabel = ({id, value, onInputChange, type='text', children}) => (
-    <>
-      <label htmlFor={id}>{children}</label>
-      <input id={id} type={type} value={value} onChange={onInputChange} />
-    </>
-  );
+const InputWithLabel = ({ id, value, onInputChange, type = 'text', children }) => (
+  <>
+    <label htmlFor={id}>{children}</label>
+    <input id={id} type={type} value={value} onChange={onInputChange} />
+  </>
+);
 
 
 export default App
