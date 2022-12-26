@@ -23,12 +23,19 @@ const SearchForm = ({
 )
 
 const useStorageState = (key, initialState) => {
+  const isMounted = React.useRef(false);
+
   const [value, setValue] = React.useState(
     localStorage.getItem(key) || initialState
   );
 
   React.useEffect(() => {
-    localStorage.setItem(key, value);
+    if (!isMounted.current) {
+      isMounted.current = true;
+    } else {
+      console.log('A');
+      localStorage.setItem(key, value);
+    }
   }, [value, key]);
 
   return [value, setValue]
@@ -87,6 +94,15 @@ const storiesReducer = (state, action) => {
   }
 };
 
+const getSumComments = (stories) => {
+  console.log('C');
+
+  return stories.data.reduce(
+    (result, value) => result + value.num_comments,
+    0
+  );
+};
+
 const App = () => {
 
   const [searchTerm, setSearchTerm] = useStorageState('search', '');
@@ -114,15 +130,16 @@ const App = () => {
   }, [url])
 
   React.useEffect(() => {
+    console.log('How many times do I log?')
     handleFetchStories();
   }, [handleFetchStories]);
 
-  const handleRemoveStory = (item) => {
+  const handleRemoveStory = React.useCallback((item) => {
     dispatchStories({
       type: 'REMOVE_STORY',
       payload: item
     });
-  };
+  }, []);
 
   const handleSearchInput = (event) => {
     setSearchTerm(event.target.value);
@@ -134,9 +151,16 @@ const App = () => {
     event.preventDefault();
   };
 
+  console.log ('B:App')
+
+  const sumComments = React.useMemo(
+    () => getSumComments(stories),
+    [stories]
+  );
+
   return (
     <div>
-      <h1>My Hacker Stories</h1>
+      <h1>My Hacker Stories with {sumComments} comments.</h1>
 
       <SearchForm
         onSearchInput={handleSearchInput}
@@ -160,17 +184,19 @@ const App = () => {
   );
 }
 
-const List = ({ list, onRemoveItem }) =>
-(
-  <ul>
-    {list.map((item) =>
-      <Item
-        key={item.objectID}
-        item={item}
-        onRemoveItem={onRemoveItem}
-      />
-    )}
-  </ul>
+const List = React.memo(
+  ({ list, onRemoveItem }) =>
+    console.log('B:List') || (
+    <ul>
+      {list.map((item) =>
+        <Item
+          key={item.objectID}
+          item={item}
+          onRemoveItem={onRemoveItem}
+        />
+      )}
+    </ul>
+    )
 );
 
 const Item = ({ item, onRemoveItem }) => {
