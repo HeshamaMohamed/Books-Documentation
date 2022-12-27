@@ -199,4 +199,6 @@ const InputWithLabel = ({ id, value, onInputChange, type = 'text', children }) =
 );
 
 
-export default App
+export default App;
+
+export { storiesReducer, SearchForm, InputWithLabel, List, Item };
