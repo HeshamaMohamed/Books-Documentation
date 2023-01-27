@@ -106,6 +106,11 @@ describe('SearchForm', () => {
 
     expect(searchFormProps.onSearchSubmit).toHaveBeenCalledTimes(1);
   });
+
+  it('renders snapshop', () => {
+    const { container } = render(<SearchForm {...searchFormProps} />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });
 
 describe('App', () => {
