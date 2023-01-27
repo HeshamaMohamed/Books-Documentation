@@ -1,6 +1,5 @@
-
-import * as React from 'react'
-import axios from 'axios'
+import * as React from 'react';
+import axios from 'axios';
 
 const SearchForm = ({
   searchTerm, onSearchInput, onSearchSubmit
@@ -20,7 +19,7 @@ const SearchForm = ({
       Submit
     </button>
   </form>
-)
+);
 
 const useStorageState = (key, initialState) => {
   const [value, setValue] = React.useState(
@@ -31,28 +30,9 @@ const useStorageState = (key, initialState) => {
     localStorage.setItem(key, value);
   }, [value, key]);
 
-  return [value, setValue]
-}
+  return [value, setValue];
+};
 
-const initialStories = [
-  {
-    title: 'React',
-    url: 'https://reactjs.org/',
-    author: 'Jordan Walke',
-    num_comments: 3,
-    points: 4,
-    objectID: 0,
-  },
-  {
-    title: 'Redux',
-    url: 'https://redux.js.org/',
-    author: 'Dan Abramov, Andrew Clark',
-    num_comments: 2,
-    points: 5,
-    objectID: 1,
-  }
-]
-const API_ENDPOINT = 'https://hn.algolia.com/api/v1/search?query=';
 
 const storiesReducer = (state, action) => {
   switch (action.type) {
@@ -69,7 +49,7 @@ const storiesReducer = (state, action) => {
         isError: false,
         data: action.payload,
       };
-    case 'STORIES_FETCH_ERROR':
+    case 'STORIES_FETCH_FAILURE':
       return {
         ...state,
         isLoading: false,
@@ -87,11 +67,13 @@ const storiesReducer = (state, action) => {
   }
 };
 
+const API_ENDPOINT = 'https://hn.algolia.com/api/v1/search?query=';
+
 const App = () => {
 
-  const [searchTerm, setSearchTerm] = useStorageState('search', '');
+  const [searchTerm, setSearchTerm] = useStorageState('search', 'React');
 
-  const [url, setUrl] = React.useState(`${API_ENDPOINT}${searchTerm}`)
+  const [url, setUrl] = React.useState(`${API_ENDPOINT}${searchTerm}`);
 
   const [stories, dispatchStories] = React.useReducer(
     storiesReducer, // reducer function
@@ -109,9 +91,9 @@ const App = () => {
         payload: result.data.hits,
       });
     } catch {
-      dispatchStories({ type: 'STORIES_FETCH_FAILURE' })
+      dispatchStories({ type: 'STORIES_FETCH_FAILURE' });
     }
-  }, [url])
+  }, [url]);
 
   React.useEffect(() => {
     handleFetchStories();
@@ -158,7 +140,7 @@ const App = () => {
       )}
     </div>
   );
-}
+};
 
 const List = ({ list, onRemoveItem }) =>
 (
