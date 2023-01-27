@@ -1,25 +1,8 @@
 import * as React from 'react';
 import axios from 'axios';
-
-const SearchForm = ({
-  searchTerm, onSearchInput, onSearchSubmit
-}) => (
-  <form onSubmit={onSearchSubmit}>
-    <InputWithLabel
-      id="search"
-      label="Search"
-      value={searchTerm}
-      isFocused
-      onInputChange={onSearchInput}
-    >
-      <strong>Search: </strong>
-    </InputWithLabel>
-
-    <button type='submit' disabled={!searchTerm}>
-      Submit
-    </button>
-  </form>
-);
+import { InputWithLabel } from './InputWithLabel'
+import { SearchForm } from './SearchForm';
+import { List, Item } from './List';
 
 const useStorageState = (key, initialState) => {
   const [value, setValue] = React.useState(
@@ -32,7 +15,6 @@ const useStorageState = (key, initialState) => {
 
   return [value, setValue];
 };
-
 
 const storiesReducer = (state, action) => {
   switch (action.type) {
@@ -141,45 +123,6 @@ const App = () => {
     </div>
   );
 };
-
-const List = ({ list, onRemoveItem }) =>
-(
-  <ul>
-    {list.map((item) =>
-      <Item
-        key={item.objectID}
-        item={item}
-        onRemoveItem={onRemoveItem}
-      />
-    )}
-  </ul>
-);
-
-const Item = ({ item, onRemoveItem }) => {
-  return (
-    <li >
-      <span>
-        <a href={item.url}>{item.title} </a>
-      </span>
-      <span>{item.author} </span>
-      <span>{item.num_comments} </span>
-      <span>{item.points} </span>
-      <span>
-        <button type='button' onClick={() => onRemoveItem(item)}>
-          Dismiss
-        </button>
-      </span>
-    </li>
-  );
-};
-
-const InputWithLabel = ({ id, value, onInputChange, type = 'text', children }) => (
-  <>
-    <label htmlFor={id}>{children}</label>
-    <input id={id} type={type} value={value} onChange={onInputChange} />
-  </>
-);
-
 
 export default App;
 
