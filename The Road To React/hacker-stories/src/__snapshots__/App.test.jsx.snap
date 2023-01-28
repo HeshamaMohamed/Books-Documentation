@@ -1,0 +1,23 @@
+// Vitest Snapshot v1
+
+exports[`SearchForm > renders snapshop 1`] = `
+<form>
+  <label
+    for="search"
+  >
+    <strong>
+      Search: 
+    </strong>
+  </label>
+  <input
+    id="search"
+    type="text"
+    value="React"
+  />
+  <button
+    type="submit"
+  >
+    Submit
+  </button>
+</form>
+`;
