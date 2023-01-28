@@ -3,6 +3,15 @@ import axios from 'axios';
 import { InputWithLabel } from './InputWithLabel'
 import { SearchForm } from './SearchForm';
 import { List, Item } from './List';
+import { sortBy } from 'lodash';
+
+const SORTS = {
+  NONE: (list) => list,
+  TITLE: (list) => sortBy(list, 'title'),
+  AUTHOR: (list) => sortBy(list, 'author'),
+  COMMENTS: (list) => sortBy(list, 'num_comments').reverse(),
+  POINTS: (list) => sortBy(list, 'points').reverse(),
+}
 
 const useStorageState = (key, initialState) => {
   const [value, setValue] = React.useState(
@@ -126,4 +135,4 @@ const App = () => {
 
 export default App;
 
-export { storiesReducer, SearchForm, InputWithLabel, List, Item };
+export { storiesReducer, SearchForm, InputWithLabel, List, Item, SORTS };
